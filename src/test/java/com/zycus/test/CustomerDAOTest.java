@@ -71,7 +71,7 @@ public class CustomerDAOTest {
 
 		Customer customer = new Customer();
 
-		customer.setName("adi");
+		customer.setName("aditya");
 		customer.setContact("9870364708");
 		customer.setCity("Pune");
 
