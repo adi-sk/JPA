@@ -6,8 +6,11 @@ import org.junit.Test;
 
 import com.zycus.dao.CustomerDAO;
 import com.zycus.dao.GenericDAO;
+import com.zycus.entity.Account;
 import com.zycus.entity.Address;
 import com.zycus.entity.Customer;
+import com.zycus.enums.Type;
+import com.zycus.service.AccountService;
 
 public class CustomerDAOTest {
 
@@ -30,7 +33,7 @@ public class CustomerDAOTest {
 	public void testFetchCustomer() {
 
 		GenericDAO genericD = new GenericDAO();
-		Customer customer = (Customer) genericD.fetchById(3, Customer.class);
+		Customer customer = (Customer) genericD.fetchById(1, Customer.class);
 
 		// assertNotNull(customer);
 		System.out.println(customer);
@@ -84,6 +87,17 @@ public class CustomerDAOTest {
 		customer.setAddress(address);
 		genericD.create(customer);
 
+	}
+
+	@Test
+	public void demo() {
+		AccountService service = new AccountService();
+		Account account = new Account();
+		account.setName("Aditya");
+		account.setType(Type.SAVINGS);
+		account.setBalance(1000l);
+
+		service.openAccount(account);
 	}
 
 }
