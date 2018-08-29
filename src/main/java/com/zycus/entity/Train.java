@@ -19,7 +19,7 @@ public class Train {
 	private String source;
 	private String destination;
 
-	@OneToMany()
+	@OneToMany(mappedBy = "train")
 	private Set<Booking> bookings;
 
 	public int getTrainNo() {

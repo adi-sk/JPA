@@ -13,8 +13,8 @@ public class DeptEmpTest {
 	public void addDep() {
 
 		Department dept = new Department();
-		dept.setDeptno(1);
-		dept.setName("HR");
+		dept.setDeptno(2);
+		dept.setName("ITS");
 		dept.setLocation("Mumbai");
 
 		GenericD genericD = new GenericD();
@@ -27,13 +27,13 @@ public class DeptEmpTest {
 	public void addEmp() {
 		Employee emp = new Employee();
 
-		Department dept = genericD.fetchById(1, Department.class);
+		Department dept = genericD.fetchById(2, Department.class);
 
 		System.out.println(dept);
 
-		emp.setEmpNo(1003);
-		emp.setName("adi");
-		emp.setSalary(1000);
+		emp.setEmpNo(1005);
+		emp.setName("aditya k");
+		emp.setSalary(100);
 		// emp.setDepartment(dept);
 
 		dept.getEmployees().add(emp);
